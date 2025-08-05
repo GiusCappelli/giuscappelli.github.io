@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Developer & Writer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Your Name</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showSection('about')" class="active">About</a></li>
+                    <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+                    <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h1>Hi, I'm [Your Name]</h1>
+            <p class="about-intro">
+                MSc. Physicist, specialized in Geophysics. Pursuing a PhD in Distributed Fiber Optic Sensing.
+            </p>
+            
+            <h3>About Me</h3>
+            <p>
+                I'm a Physicist with a love for building things and sharing knowledge. 
+                This site serves as both a portfolio of my work and a place where I practice 
+                writing through regular blog posts. English is not my first language, and I 
+		haven't yet written enough to consider myself a proficient writer (proof: what I've just written).
+		I believe that writing helps clarify thinking, and I'm excited to share my thoughts on
+		my research, as well as technology, development, and whatever else catches my interest.
+            </p>
+
+            <p>
+                When I'm not working on my thesis, you can find me learning about linux, system control, 
+		programming, game development, or strumming a mandolin. At this point in time I am very scattered.
+		I'm always eager to learn new technologies and improve my craft, both in development 
+                and in writing.
+            </p>
+
+            <div class="skills">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>Fortran</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>MATLAB</li>
+                        <li>HTML/CSS (just starting)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks</h4>
+                    <ul>
+                        <li>No idea what a framework is.</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>Vim & Neovim</li>
+                        <li>Git</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section hidden">
+            <h2>Blog Posts</h2>
+            <p>Here's where I practice writing and share my thoughts on research, development and learning.</p>
+            
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <h3>Getting Started with My Developer Blog</h3>
+                    <div class="date">August 8, 2025</div>
+                    <div class="excerpt">
+                        Reflections on starting this blog and my goals for improving my writing, 
+                        while documenting my ending journey as a PhD student.
+                    </div>
+                    <a href="posts/getting-started.html" class="read-more">Read More →</a>
+                </article>
+
+                <!-- <article class="blog-post"> -->
+                    <!-- <h3>Why Every Developer Should Write</h3> -->
+                    <!-- <div class="date">January 10, 2025</div> -->
+                    <!-- <div class="excerpt"> -->
+                        <!-- Writing isn't just for writers. Here's why I believe every developer  -->
+                        <!-- benefits from regular writing practice... -->
+                    <!-- </div> -->
+                    <!-- <a href="posts/developers-should-write.html" class="read-more">Read More →</a> -->
+                <!-- </article> -->
+
+                <!-- Add more blog posts as you write them -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section hidden">
+            <h2>Projects</h2>
+            <p>Here are some things I've built:</p>
+            
+            <div class="projects">
+                <div class="project">
+                    <h3>Jotty</h3>
+                    <p>
+                        Jotty is a simple bash script (60 lines) to perform some quick note-taking.
+			There is no overhead, notes are written in your favorite editor and then 
+			stored in a folder by date. 
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/GiusCappelli/jotty" target="_blank">GitHub</a>
+                        <!-- <a href="#" target="_blank">GitHub</a> -->
+                    </div>
+                </div>
+
+                <!-- <div class="project"> -->
+                    <!-- <h3>Another Project</h3> -->
+                    <!-- <p> -->
+                        <!-- Description of another project. Include the tech stack and any  -->
+                        <!-- interesting challenges you overcame. -->
+                    <!-- </p> -->
+                    <!-- <div class="project-links"> -->
+                        <!-- <a href="#" target="_blank">Live Demo</a> -->
+                        <!-- <a href="#" target="_blank">GitHub</a> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Giuseppe Cappelli. Vibecoded with HTML and CSS.</p>
+            <p>
+                <a href="mailto:caps.gius@gmail.com" style="color: #3498db;">caps.gius@gmail.com</a> | 
+                <a href="https://github.com/GiusCappelli" style="color: #3498db;">GitHub</a> |
+                <a href="https://www.linkedin.com/in/giuseppe-cappelli-3a5a9722b/" style="color: #3498db;">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionName).classList.remove('hidden');
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
