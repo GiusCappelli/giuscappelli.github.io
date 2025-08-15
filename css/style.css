@@ -97,10 +97,6 @@ h3 {
     font-style: italic;
 }
 
-body.dark-mode .about-intro {
-    color:#e0e0e0 !important;
-}
-
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -152,10 +148,6 @@ body.dark-mode .about-intro {
 .blog-post .excerpt {
     color: #666;
     margin-bottom: 1rem;
-}
-
-.dark-mode .blog-post .excerpt {
-    color:#e0e0e0 !important;
 }
 
 .read-more {
@@ -224,10 +216,6 @@ footer {
 .pdf-container iframe,
 .pdf-container object {
     border-radius: 8px;
-}
-
-body.dark-mode .pdf-container {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 /* Blog post specific styles */
@@ -301,31 +289,38 @@ body.dark-mode .pdf-container {
 /* Dark mode styles */
 body.dark-mode {
     background-color: #1a1a1a;
-    color: #e0e0e0 !important;
+    color: #e0e0e0 ;
 }
 
 body.dark-mode header {
     background: #2d2d2d;
     border-bottom: 1px solid #404040;
 }
+body.dark-mode .about-intro {
+    color:#e0e0e0 ;
+}
+
 
 body.dark-mode .section,
 body.dark-mode .blog-post-content {
     background: #2d2d2d;
-    color: #e0e0e0 !important;
+    color: #e0e0e0 ;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.dark-mode .blog-post .excerpt {
+    color:#e0e0e0 ;
 }
 
 body.dark-mode .skills {
-    color:#e0e0e0 !important;
-}
-
-body.dark-mode .skill-category li {
-    color:#e0e0e0 !important;
+    color:#e0e0e0 ;
 }
 
 body.dark-mode .skill-category h4 {
-    color:#64b5f6;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+}
+body.dark-mode .skill-category li {
+    color:#e0e0e0 ;
 }
 
 body.dark-mode .blog-post,
@@ -333,9 +328,18 @@ body.dark-mode .project {
     background: #2d2d2d;
     border: 1px solid #404040;
 }
+body.dark-mode .read-more {
+    color: #e3e3e3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
+body.dark-mode .read-more:hover {
+    color: #2980b9;
+}
 body.dark-mode .logo {
-    color: #e0e0e0 !important;
+    color: #e0e0e0 ;
 }
 
 body.dark-mode .nav-links a {
@@ -344,17 +348,17 @@ body.dark-mode .nav-links a {
 
 body.dark-mode .nav-links a:hover,
 body.dark-mode .nav-links a.active {
-    color: #e0e0e0 !important;
+    color: #e0e0e0 ;
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
-    color: #e0e0e0 !important;
+    color: #e0e0e0 ;
 }
 
 body.dark-mode h2 {
-    border-bottom-color: #3498db;
+    border-bottom-color: #e3e3e3;
 }
 
 body.dark-mode footer {
@@ -364,7 +368,7 @@ body.dark-mode footer {
 /* Dark mode toggle button */
 .dark-mode-toggle {
     background: none;
-    border: 2px solid #3498db;
+    border: 1px solid #e3e3e3;
     color: #3498db;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -378,7 +382,8 @@ body.dark-mode footer {
 }
 
 body.dark-mode .dark-mode-toggle {
-    border-color: #64b5f6;
+    border: none;
+    /* border-color: #64b5f6; */
     color: #64b5f6;
 }
 
